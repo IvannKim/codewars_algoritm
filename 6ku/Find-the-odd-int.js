@@ -17,7 +17,7 @@ function findOdd(arr) {
     })
     if (count % 2 === 0) {
         arr.splice(0, count)
-        findOdd(arr);
+        return findOdd(arr);
     } else return arr1
 }
 
