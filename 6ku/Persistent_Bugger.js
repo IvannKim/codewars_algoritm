@@ -15,14 +15,16 @@ For example:
 const num = 39;
 
 function persistence(num) {
+    let count = 0;
     let res = 1
     const splitedNum = String(num).split('')
-    console.log(splitedNum)
-    splitedNum.forEach(element => {
-        res *= element
-    })
-    console.log(res)
-    return 
+    splitedNum.forEach(element => res *= element)
+    if (res < 10) {
+        return count
+    } else {
+        count++
+        return persistence(res, count)
+    }
 }
 
 console.log(persistence(num))
