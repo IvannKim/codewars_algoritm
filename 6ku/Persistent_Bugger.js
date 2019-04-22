@@ -12,19 +12,42 @@ For example:
 
  persistence(4) === 0 // because 4 is already a one-digit number */
 
-const num = 39;
+const num = 9;
 
 function persistence(num) {
     let count = 0;
-    let res = 1
-    const splitedNum = String(num).split('')
-    splitedNum.forEach(element => res *= element)
-    if (res < 10) {
-        return count
-    } else {
+    let res = 1;
+    if (num >= 10) {
+        let splitedNum = String(num).split('')
+        splitedNum.forEach(element => res *= element)
         count++
         return persistence(res, count)
+    } else {
+        return count
     }
 }
-
 console.log(persistence(num))
+
+function fibonacci(num) {
+	var answer = 0;
+	if( num <= 1 ) {
+		return num;
+	}
+	else if( num > 1 ) {
+		answer = fibonacci(num-1) + fibonacci(num-2);
+	}
+	return answer;
+}
+
+// function persistence(num) {
+//     let count = 0;
+//     let res = 1
+//     const splitedNum = String(num).split('')
+//     splitedNum.forEach(element => res *= element)
+//     if (res < 10) {
+//         return count
+//     } else {
+//         count++
+//         return persistence(res, count)
+//     }
+// }
