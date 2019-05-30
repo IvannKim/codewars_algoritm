@@ -21,7 +21,7 @@ function accum(string) {
     let res = []
     const splitedStr = string.split('')
     splitedStr.forEach((str, index) => {
-        res.push(str.toUpperCase() + index)
+        res.push(str.toUpperCase())
     })
     return res
 }
