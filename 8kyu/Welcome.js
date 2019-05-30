@@ -29,7 +29,7 @@ spanish: 'Bienvenido',
 swedish: 'Valkommen',
 welsh: 'Croeso'*/
 
-const language = 'asdasd';
+const language = 'asfsfasf';
 
 function greet(language) {
     const languageObj = {
@@ -51,14 +51,9 @@ function greet(language) {
         swedish: 'Valkommen',
         welsh: 'Croeso'
     };
-    let translation;
 
-    Object.keys(languageObj).forEach(e => {
-        if (e === language) translation = languageObj[e];
-        else translation = languageObj.english;
-    });
-
-    return translation;
+    if (languageObj.hasOwnProperty(language)) return languageObj[language];
+    else return languageObj.english;
 }
 
 console.log(greet(language));
