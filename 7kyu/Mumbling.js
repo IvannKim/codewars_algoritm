@@ -11,19 +11,14 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 The parameter of accum is a string 
 which includes only letters from a..z and A..Z. */
 
-const str = 'abcd';
+const str = 'ab';
 
 function accum(string) {
-    // resArray.push(str[0])
-    // resArray.push(str[1]+str[1])
-    // resArray.push(str[2]+str[2]+str[2])
-    // resArray.push(str[3]+str[3]+str[3]+str[3])
-    let res = []
-    const splitedStr = string.split('')
-    splitedStr.forEach((str, index) => {
-        res.push(str.toUpperCase())
-    })
-    return res
+  const res = [];
+  const splitedStr = string.split('');
+  splitedStr.forEach((element, index) => {
+    
+  });
 }
 
 console.log(accum(str));
