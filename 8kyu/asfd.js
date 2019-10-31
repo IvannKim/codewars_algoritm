@@ -1,8 +1,3 @@
-
-
-
-
-
 const salary = 10;
 const bonus = true;
 
