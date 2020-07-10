@@ -11,10 +11,20 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 The parameter of accum is a string
 which includes only letters from a..z and A..Z. */
 
-const str = 'ab';
+const str = 'abcd';
 
-function accum(string) {
-
+function accum(s) {
+  return s.split('').reduce((acc, cur, idx) => {
+    let mumble = '';
+    for (let i = 0; i < idx + 1; i++) {
+      if (i === 0) {
+        mumble += cur.toUpperCase();
+      } else {
+        mumble += cur.toLowerCase();
+      }
+    }
+    return idx === 0 ? (acc += mumble) : (acc += `-${mumble}`);
+  }, '');
 }
 
 console.log(accum(str));
