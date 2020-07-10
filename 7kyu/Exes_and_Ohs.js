@@ -28,6 +28,5 @@ function XO(str) {
       }
     }
   }
-  console.log('hi');
   return stack.length === 0 ? true : false;
 }
